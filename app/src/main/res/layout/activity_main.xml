@@ -23,7 +23,6 @@
             android:layout_centerVertical="true"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:fontSize="24sp"
             android:fontFamily="sans-serif-medium"
             android:textSize="24sp" />
 
