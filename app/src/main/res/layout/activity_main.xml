@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/apk-res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,12 +8,13 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- Header bar -->
     <RelativeLayout
         android:id="@+id/headerBar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -38,15 +39,16 @@
             app:tint="@color/white" />
     </RelativeLayout>
 
-    <!-- Temperature Display Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/tempCard"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="220dp"
         android:layout_marginTop="24dp"
         app:cardCornerRadius="24dp"
         app:cardBackgroundColor="@color/card_dark"
         app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerBar">
 
         <LinearLayout
@@ -75,7 +77,6 @@
                 android:fontFamily="sans-serif-black"
                 android:layout_marginTop="8dp" />
 
-            <!-- Source Indicator Tag -->
             <LinearLayout
                 android:id="@+id/layoutSourceTag"
                 android:layout_width="wrap_content"
@@ -106,14 +107,15 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Controls Row -->
     <LinearLayout
         android:id="@+id/controlsLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tempCard">
 
         <Button
@@ -143,7 +145,6 @@
             android:insetBottom="0dp" />
     </LinearLayout>
 
-    <!-- Status Subtext -->
     <TextView
         android:id="@+id/tvStatusSubtext"
         android:layout_width="wrap_content"
@@ -156,15 +157,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/controlsLayout" />
 
-    <!-- Chart Card -->
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         app:cardCornerRadius="24dp"
         app:cardBackgroundColor="@color/card_dark"
         app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvStatusSubtext"
         app:layout_constraintBottom_toBottomOf="parent">
 
